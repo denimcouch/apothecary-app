@@ -10,7 +10,6 @@ class PurchasesController < Sinatra::Base
   get '/purchases/new' do
     @potions = Potion.all
     @adventurers = Adventurer.all
-    # binding.pry
     erb :new
   end
 

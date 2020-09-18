@@ -27,13 +27,11 @@ class AdventurersController < Sinatra::Base
   end
 
   post '/adventurers' do
-    binding.pry
     adventurer = Adventurer.create(params)
     redirect "/adventurers/#{adventurer.slug}"
   end
 
   patch '/adventurers/:slug' do
-    binding.pry
     adventurer = Adventurer.find_by_slug(params[:slug])
     adventurer.update(params[:adventurer])
     adventurer.save
