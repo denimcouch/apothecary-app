@@ -1,4 +1,4 @@
-class PotionsController < ApplicationController
+class PotionsController < Sinatra::Base
   set :views, "app/views/potions"
   set :method_override, true
 

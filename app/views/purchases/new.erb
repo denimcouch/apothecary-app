@@ -1,1 +1,23 @@
 <h1>Here is where you buy a Potion</h2>
+
+<form action="/purchases" method="post">
+
+<h2><label for="adventurer_name">Who Are You?</label></h2>
+  <select name="adventurer[name]">
+    <% @adventurers.each do | adventurer | %>
+            <option value=<%= adventurer.id%> >
+                <%= adventurer.name %>
+            </option>
+        <%end%>
+  </select><br><br>
+
+<h2><label>What Potion(s) Do You Need?</label></h2>
+  <% @potions.each do |potion| %>
+   <ul><li>
+      <%=potion.name%> - <%=potion.price%>
+      <input type="checkbox" name="potions[]" 
+      value="<%=potion.id%>">
+   </li></ul>
+  <% end %>
+<input type="Submit" value="Create">
+</form>

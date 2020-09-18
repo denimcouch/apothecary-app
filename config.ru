@@ -4,5 +4,4 @@ require 'config/environment'
 use AdventurersController
 use PotionsController
 use PurchasesController
-use RecipesController
 run ApplicationController

@@ -1,4 +1,4 @@
-class AdventurersController < ApplicationController
+class AdventurersController < Sinatra::Base
   set :views, "app/views/adventurers"
   set :method_override, true
 

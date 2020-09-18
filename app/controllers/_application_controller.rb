@@ -7,8 +7,5 @@ class ApplicationController < Sinatra::Base
   get '/' do
     erb :welcome
   end
-
-  get '/purchases/new' do
-    erb :new
-  end
+  
 end
