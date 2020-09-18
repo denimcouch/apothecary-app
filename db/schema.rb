@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_18_152504) do
+ActiveRecord::Schema.define(version: 2020_09_18_193139) do
 
   create_table "adventurers", force: :cascade do |t|
     t.string "name"
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 2020_09_18_152504) do
   create_table "potions", force: :cascade do |t|
     t.string "name"
     t.string "price"
+    t.string "effects"
   end
 
   create_table "purchases", force: :cascade do |t|

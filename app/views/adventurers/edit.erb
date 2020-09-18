@@ -1,0 +1,23 @@
+<h1>Edit Info</h1>
+
+<form action="/adventurers/<%=@adventurer.slug%>" method="post">
+  <input type= "hidden" name="_method" value="patch">
+
+<label>Edit Name</label>
+  <input type="text" name="adventurer[name]" value= <%=@adventurer.name%>>
+<br><br>
+
+<label>Change Class</label>  
+  <input type="text" name="adventurer[role]" value= <%=@adventurer.role%>>
+<br><br>
+<input type="submit" value="Submit Changes"> 
+</form>
+<br><br><br>
+
+<form action="/adventurers/<%=@adventurer.slug%>" method="get">
+<input type="submit" value="Return to Previous Page" />
+</form>
+
+<form action="/" method="get">
+<input type="submit" value="Return to Home Page" />
+</form>

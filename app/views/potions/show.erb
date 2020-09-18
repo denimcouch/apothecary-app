@@ -2,9 +2,18 @@
 
 <h2>Price: <%=@potion.price%></h2>
 
-<h3>Made with: <%=@potion.recipe.ingredients%></h3>
+<h3> <%=@potion.effects%> </h3>
+<h4><i>Made with: <%=@potion.recipe.ingredients%></i></h4><br><br><br>
+
+<form action="/purchases/new" method="get">
+<input type="submit" value="Buy Potions" />
+</form><br>
 
 <form action="/potions" method="get">
 <input type="submit" value="Return to Potions Page" />
+</form>
+
+<form action="/" method="get">
+<input type="submit" value="Return to Home Page" />
 </form>
 
