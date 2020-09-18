@@ -39,4 +39,10 @@ class AdventurersController < Sinatra::Base
     adventurer.save
     redirect "/adventurers/#{adventurer.slug}"
   end
+
+  delete '/adventurers/:slug' do
+    adventurer = Adventurer.find_by_slug(params[:slug])
+    adventurer.destroy
+    redirect "/adventurers"
+  end
 end
