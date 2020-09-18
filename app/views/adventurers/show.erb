@@ -1,0 +1,16 @@
+<h1><%=@adventurer.name%></h1>
+
+<h2>Class: <%=@adventurer.role%></h2>
+
+<h3>Potions Purchased:</h3>
+<h4>
+<% @adventurer.potions.each do |potion|%>
+  <a href="/potions/<%=potion.slug%>">
+    <li><%=potion.name%></li>
+  </a>
+<% end %>
+</h4>
+
+<form action="/adventurers" method="get">
+<input type="submit" value="Return to Previous Page" />
+</form>

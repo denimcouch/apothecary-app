@@ -1,0 +1,13 @@
+<h1>Adventurers</h1>
+
+<h2>
+<% @adventurers.each do |adventurer|%>
+  <a href="/adventurers/<%=adventurer.slug%>">
+    <li><%=adventurer.name%></li>
+  </a>
+<% end %>
+</h2>
+
+<form action="/" method="get">
+<input type="submit" value="Return to Main Page" />
+</form>

@@ -1,0 +1,12 @@
+<h1>See Who's Buying</h1>
+
+<h2>
+  <%@purchases.each do |purchase|%>
+    <ul>
+      <li>
+        <a href="/adventurers/<%=purchase.adventurer.slug%>"><%=purchase.adventurer.name%></a> bought a 
+        <a href="<%=purchase.potion.slug%>"><%=purchase.potion.name%></a>.
+      </li>
+    </ul>
+  <% end %>
+</h2>

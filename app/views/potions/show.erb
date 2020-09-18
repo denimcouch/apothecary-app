@@ -1,0 +1,10 @@
+<h1><%=@potion.name%></h1>
+
+<h2>Price: <%=@potion.price%></h2>
+
+<h3>Made with: <%=@potion.recipe.ingredients%></h3>
+
+<form action="/potions" method="get">
+<input type="submit" value="Return to Potions Page" />
+</form>
+
